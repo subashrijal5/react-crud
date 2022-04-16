@@ -9,7 +9,7 @@ const Card = () => {
     email: "",
     uuid: "",
   });
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const handleAddEditUser = (user) => {
     const editUser = users.find((u) => u.uuid === user.uuid);
     if (editUser) {
@@ -33,8 +33,8 @@ const Card = () => {
   const handleThemeSwitch = () => {
     var html = document.getElementById("main_html");
     // console.log(html);
-    setTheme(theme === "light" ? "dark" : "light");
-    html.setAttribute("data-theme", theme === "light" ? "dark" : "light");
+    setTheme(theme === "dark" ? "light" : "dark");
+    html.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
   };
   return (
     <div>
